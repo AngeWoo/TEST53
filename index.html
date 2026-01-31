@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ChaPond 茶加焙 - 專業珍珠奶茶原料供應商，提供高品質快煮珍珠、糖漿、茶葉等原料">
+    <title>ChaPond 茶加焙 - 專業珍珠奶茶原料供應商</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Cinzel:wght@400;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 加载动画 -->
+    <div class="loader" id="loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- 导航栏 -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="ChaPond 茶加焙" onerror="this.style.display='none'; this.parentElement.innerHTML='<span>ChaPond 茶加焙</span>'">
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li class="active"><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li class="dropdown">
+                    <a href="product.html">PRODUCT</a>
+                    <div class="dropdown-content">
+                        <a href="product.html#pearls">快煮珍珠 Fast Pearls</a>
+                        <a href="product.html#syrup">糖漿 Syrup</a>
+                        <a href="product.html#powder">粉類 Powder</a>
+                        <a href="product.html#tea">茶葉 Tea</a>
+                        <a href="product.html#jelly">果凍 Jelly</a>
+                        <a href="product.html#popping">爆漿珍珠 Popping Boba</a>
+                        <a href="product.html#equipment">設備 Equipment</a>
+                    </div>
+                </li>
+                <li><a href="service.html">SERVICE</a></li>
+                <li><a href="news.html">NEWS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+
+            <div class="nav-icons">
+                <div class="search-box">
+                    <input type="text" placeholder="搜尋...">
+                    <button type="submit">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="M21 21l-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="language-selector">
+                    <select id="language">
+                        <option value="zh-TW">繁體中文</option>
+                        <option value="zh-CN">简体中文</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                        <option value="de">Deutsch</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 主视觉区域 -->
+    <section class="hero">
+        <div class="hero-slider">
+            <div class="hero-slide active">
+                <div class="hero-content">
+                    <h1 class="hero-title">BOBA</h1>
+                    <p class="hero-subtitle">Your Best Partner for Bubble Tea Business</p>
+                    <a href="product.html" class="btn">EXPLORE PRODUCTS</a>
+                </div>
+            </div>
+            <div class="hero-slide">
+                <div class="hero-content">
+                    <h1 class="hero-title">TEA</h1>
+                    <p class="hero-subtitle">Premium Quality Tea Leaves from Taiwan</p>
+                    <a href="product.html#tea" class="btn">VIEW TEA COLLECTION</a>
+                </div>
+            </div>
+            <div class="hero-slide">
+                <div class="hero-content">
+                    <h1 class="hero-title">SERVICE</h1>
+                    <p class="hero-subtitle">Complete Solutions for Your Bubble Tea Shop</p>
+                    <a href="service.html" class="btn">OUR SERVICES</a>
+                </div>
+            </div>
+        </div>
+        <!-- 装饰叶子 -->
+        <div class="hero-decoration left">
+            <svg width="150" height="200" viewBox="0 0 150 200" fill="#5DB530" opacity="0.2">
+                <path d="M75 0C75 0 150 50 150 100C150 150 75 200 75 200C75 200 0 150 0 100C0 50 75 0 75 0Z"/>
+            </svg>
+        </div>
+        <div class="hero-decoration right">
+            <svg width="120" height="160" viewBox="0 0 150 200" fill="#5DB530" opacity="0.2">
+                <path d="M75 0C75 0 150 50 150 100C150 150 75 200 75 200C75 200 0 150 0 100C0 50 75 0 75 0Z"/>
+            </svg>
+        </div>
+        <!-- 滑块导航 -->
+        <div class="slider-nav">
+            <span class="slider-dot active" data-slide="0"></span>
+            <span class="slider-dot" data-slide="1"></span>
+            <span class="slider-dot" data-slide="2"></span>
+        </div>
+    </section>
+
+    <!-- 产品展示区 -->
+    <section class="products-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>OUR PRODUCTS</h2>
+                <p>High quality raw materials for your bubble tea business</p>
+            </div>
+            <div class="products-grid">
+                <a href="product.html#pearls" class="product-card">
+                    <div class="icon">
+                        <svg width="60" height="60" viewBox="0 0 100 100" fill="#5DB530">
+                            <circle cx="50" cy="50" r="40" fill="none" stroke="#5DB530" stroke-width="3"/>
+                            <circle cx="30" cy="40" r="8"/>
+                            <circle cx="50" cy="35" r="8"/>
+                            <circle cx="70" cy="40" r="8"/>
+                            <circle cx="35" cy="60" r="8"/>
+                            <circle cx="55" cy="55" r="8"/>
+                            <circle cx="65" cy="65" r="8"/>
+                        </svg>
+                    </div>
+                    <h3>珍珠粉圓</h3>
+                    <p>Tapioca Pearls</p>
+                    <div class="view-overlay"><span>VIEW</span></div>
+                </a>
+                <a href="product.html#syrup" class="product-card">
+                    <div class="icon">
+                        <svg width="60" height="60" viewBox="0 0 100 100" fill="#5DB530">
+                            <path d="M35 20h30v10h-30zM30 30h40l-5 60h-30z" fill="none" stroke="#5DB530" stroke-width="3"/>
+                            <rect x="35" y="50" width="30" height="30" rx="2"/>
+                        </svg>
+                    </div>
+                    <h3>糖漿果醬</h3>
+                    <p>Syrup & Jam</p>
+                    <div class="view-overlay"><span>VIEW</span></div>
+                </a>
+                <a href="product.html#powder" class="product-card">
+                    <div class="icon">
+                        <svg width="60" height="60" viewBox="0 0 100 100" fill="#5DB530">
+                            <path d="M25 30h50l-10 55h-30z" fill="none" stroke="#5DB530" stroke-width="3"/>
+                            <path d="M30 45h40M30 55h35M30 65h30" stroke="#5DB530" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>粉類產品</h3>
+                    <p>Powder</p>
+                    <div class="view-overlay"><span>VIEW</span></div>
+                </a>
+                <a href="product.html#tea" class="product-card">
+                    <div class="icon">
+                        <svg width="60" height="60" viewBox="0 0 100 100" fill="#5DB530">
+                            <ellipse cx="50" cy="70" rx="30" ry="15" fill="none" stroke="#5DB530" stroke-width="3"/>
+                            <path d="M20 70V45c0-15 13-25 30-25s30 10 30 25v25" fill="none" stroke="#5DB530" stroke-width="3"/>
+                            <path d="M40 20c0-10 20-10 20 0" fill="none" stroke="#5DB530" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>茶葉</h3>
+                    <p>Tea Leaves</p>
+                    <div class="view-overlay"><span>VIEW</span></div>
+                </a>
+                <a href="product.html#equipment" class="product-card">
+                    <div class="icon">
+                        <svg width="60" height="60" viewBox="0 0 100 100" fill="#5DB530">
+                            <rect x="25" y="20" width="50" height="60" rx="5" fill="none" stroke="#5DB530" stroke-width="3"/>
+                            <circle cx="50" cy="45" r="15" fill="none" stroke="#5DB530" stroke-width="2"/>
+                            <rect x="35" y="65" width="30" height="8" rx="2"/>
+                        </svg>
+                    </div>
+                    <h3>設備器材</h3>
+                    <p>Equipment</p>
+                    <div class="view-overlay"><span>VIEW</span></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我们区域 -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/about-home.jpg" alt="ChaPond 茶加焙" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27500%27 height=%27400%27%3E%3Crect fill=%27%23e8f5e9%27 width=%27500%27 height=%27400%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%235DB530%27 font-size=%2724%27 font-family=%27Arial%27%3EChaPond%3C/text%3E%3C/svg%3E'">
+                </div>
+                <div class="about-text">
+                    <h2>Your Best Private Label Beverage & Baking Food Partner</h2>
+                    <p>ChaPond成立於2015年，致力於提供高品質氣泡茶原料。我們擁有ISO、HALAL、HACCP、SGS、CFS等多項國際認證，確保產品品質與食品安全。</p>
+                    <p>我們不僅提供優質原料，更提供完整的開店諮詢、培訓、設計等一站式服務，幫助客戶成功創建自主品牌。</p>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <svg width="25" height="25" viewBox="0 0 24 24" fill="white">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                </svg>
+                            </div>
+                            <span>ISO認證品質</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <svg width="25" height="25" viewBox="0 0 24 24" fill="white">
+                                    <path d="M12 2L1 21h22L12 2zm0 3.5L19.5 19h-15L12 5.5z"/>
+                                </svg>
+                            </div>
+                            <span>HALAL清真認證</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <svg width="25" height="25" viewBox="0 0 24 24" fill="white">
+                                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                                </svg>
+                            </div>
+                            <span>HACCP食品安全</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <svg width="25" height="25" viewBox="0 0 24 24" fill="white">
+                                    <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
+                                </svg>
+                            </div>
+                            <span>全球配送服務</span>
+                        </div>
+                    </div>
+                    <a href="about.html" class="btn" style="margin-top: 30px;">LEARN MORE</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 新闻区域 -->
+    <section class="news-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>LATEST NEWS</h2>
+                <p>Stay updated with our latest news and events</p>
+            </div>
+            <div class="news-slider">
+                <div class="news-track" id="newsTrack">
+                    <div class="news-card">
+                        <div class="news-image">
+                            <img src="images/news1.jpg" alt="News" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27200%27%3E%3Crect fill=%27%23e8f5e9%27 width=%27400%27 height=%27200%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%235DB530%27 font-size=%2720%27 font-family=%27Arial%27%3ENews%3C/text%3E%3C/svg%3E'">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-date">
+                                <span class="day">25</span>
+                                <span class="month">MAR</span>
+                            </div>
+                            <h3>Fast Pearls Launch in June</h3>
+                            <p>我們全新的快煮珍珠系列即將於六月正式上市...</p>
+                            <a href="news.html" class="news-link">MORE →</a>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <div class="news-image">
+                            <img src="images/news2.jpg" alt="News" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27200%27%3E%3Crect fill=%27%23e8f5e9%27 width=%27400%27 height=%27200%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%235DB530%27 font-size=%2720%27 font-family=%27Arial%27%3ENews%3C/text%3E%3C/svg%3E'">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-date">
+                                <span class="day">25</span>
+                                <span class="month">OCT</span>
+                            </div>
+                            <h3>The New Brand Design of Fruit Tea Bar</h3>
+                            <p>全新水果茶品牌設計案例分享...</p>
+                            <a href="news.html" class="news-link">MORE →</a>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <div class="news-image">
+                            <img src="images/news3.jpg" alt="News" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27200%27%3E%3Crect fill=%27%23e8f5e9%27 width=%27400%27 height=%27200%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%27%235DB530%27 font-size=%2720%27 font-family=%27Arial%27%3ENews%3C/text%3E%3C/svg%3E'">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-date">
+                                <span class="day">15</span>
+                                <span class="month">OCT</span>
+                            </div>
+                            <h3>How to Cook Pearls Easily?</h3>
+                            <p>珍珠烹煮教學，讓您輕鬆掌握技巧...</p>
+                            <a href="news.html" class="news-link">MORE →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-arrows">
+                    <div class="slider-arrow prev" id="newsPrev">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M15 18l-6-6 6-6"/>
+                        </svg>
+                    </div>
+                    <div class="slider-arrow next" id="newsNext">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 18l6-6-6-6"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo-white.png" alt="ChaPond" onerror="this.style.display='none'">
+                    <h3 style="color: #5DB530; margin-bottom: 15px;">ChaPond 茶加焙</h3>
+                    <p>Your Best Partner for Bubble Tea Business. We provide high quality raw materials and complete solutions.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="product.html#pearls">Fast Pearls</a></li>
+                        <li><a href="product.html#syrup">Syrup</a></li>
+                        <li><a href="product.html#powder">Powder</a></li>
+                        <li><a href="product.html#tea">Tea Leaves</a></li>
+                        <li><a href="product.html#jelly">Jelly</a></li>
+                        <li><a href="product.html#equipment">Equipment</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#5DB530">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                        </svg>
+                        新北市三重區中正路四段10-1號
+                    </p>
+                    <p>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#5DB530">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                        +886-2-8973-1089
+                    </p>
+                    <p>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#5DB530">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                        info@chapond.com
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="white" stroke-width="2"/>
+                                <circle cx="12" cy="12" r="4" fill="none" stroke="white" stroke-width="2"/>
+                                <circle cx="18" cy="6" r="1.5"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
+                                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="LINE">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
+                                <path d="M12 2C6.48 2 2 5.58 2 10c0 2.24 1.12 4.24 2.88 5.66-.18.65-.77 2.5-1.1 3.16-.08.16-.03.35.13.45.16.1.36.07.49-.05.83-.73 3.03-2.67 4.25-3.74.77.1 1.56.15 2.35.15 5.52 0 10-3.58 10-8s-4.48-8-10-8z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="WeChat">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
+                                <path d="M8.5 11c-.83 0-1.5-.67-1.5-1.5S7.67 8 8.5 8s1.5.67 1.5 1.5S9.33 11 8.5 11zm7 0c-.83 0-1.5-.67-1.5-1.5S14.67 8 15.5 8s1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM12 2C6.48 2 2 5.92 2 10.67c0 2.58 1.27 4.9 3.26 6.5l-.82 2.5c-.08.25.05.52.3.6.1.03.2.03.3-.01l3.1-1.45c1.25.35 2.58.52 3.86.52 5.52 0 10-3.92 10-8.67S17.52 2 12 2z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ChaPond International Ltd. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

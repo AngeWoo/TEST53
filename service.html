@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ChaPond 茶加焙服務 - 諮詢、培訓、供應、設計等一站式服務">
+    <title>Services - ChaPond 茶加焙</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Cinzel:wght@400;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 加载动画 -->
+    <div class="loader" id="loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- 导航栏 -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="ChaPond 茶加焙" onerror="this.style.display='none'; this.parentElement.innerHTML='<span>ChaPond 茶加焙</span>'">
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li class="dropdown">
+                    <a href="product.html">PRODUCT</a>
+                    <div class="dropdown-content">
+                        <a href="product.html#pearls">快煮珍珠 Fast Pearls</a>
+                        <a href="product.html#syrup">糖漿 Syrup</a>
+                        <a href="product.html#powder">粉類 Powder</a>
+                        <a href="product.html#tea">茶葉 Tea</a>
+                        <a href="product.html#jelly">果凍 Jelly</a>
+                        <a href="product.html#equipment">設備 Equipment</a>
+                    </div>
+                </li>
+                <li class="active"><a href="service.html">SERVICE</a></li>
+                <li><a href="news.html">NEWS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+
+            <div class="nav-icons">
+                <div class="search-box">
+                    <input type="text" placeholder="搜尋...">
+                    <button type="submit">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="M21 21l-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="language-selector">
+                    <select id="language">
+                        <option value="zh-TW">繁體中文</option>
+                        <option value="zh-CN">简体中文</option>
+                        <option value="en">English</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 页面横幅 -->
+    <section class="page-banner">
+        <h1>OUR SERVICES</h1>
+    </section>
+
+    <!-- 服务概览 -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Complete Solutions for Your Business</h2>
+                <p>我們提供全方位的開店支援服務</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
+                            <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/>
+                        </svg>
+                    </div>
+                    <h3>諮詢服務</h3>
+                    <p>Consultation Service</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
+                            <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/>
+                        </svg>
+                    </div>
+                    <h3>專業培訓</h3>
+                    <p>Professional Training</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
+                            <path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+                        </svg>
+                    </div>
+                    <h3>原料供應</h3>
+                    <p>Raw Materials Supply</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
+                            <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3zm5 15h-2v-6H9v6H7v-7.81l5-4.5 5 4.5V18z"/>
+                        </svg>
+                    </div>
+                    <h3>店面設計</h3>
+                    <p>Shop Interior Design</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <h3>品牌設計</h3>
+                    <p>Brand Design</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
+                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                        </svg>
+                    </div>
+                    <h3>DM設計</h3>
+                    <p>DM Design Service</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                        </svg>
+                    </div>
+                    <h3>現場指導</h3>
+                    <p>On-site Guidance</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
+                            <path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/>
+                        </svg>
+                    </div>
+                    <h3>設備供應</h3>
+                    <p>Equipment Supply</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 培训课程 -->
+    <section class="content-section" style="background: var(--bg-light);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Professional Training Service</h2>
+                <p>專業培訓課程，三種方案任您選擇</p>
+            </div>
+
+            <div class="training-plans" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 40px;">
+                <!-- 方案 A -->
+                <div style="background: white; border-radius: 20px; padding: 40px 30px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: all 0.3s ease;">
+                    <div style="width: 80px; height: 80px; background: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <span style="color: white; font-size: 32px; font-weight: bold;">A</span>
+                    </div>
+                    <h3 style="font-size: 24px; margin-bottom: 10px;">方案 A</h3>
+                    <p style="color: var(--text-light); margin-bottom: 20px;">3 天培訓</p>
+                    <div style="background: var(--bg-light); padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                        <p style="font-size: 36px; font-weight: bold; color: var(--primary-color);">5</p>
+                        <p style="font-size: 14px; color: var(--text-light);">系列</p>
+                        <p style="font-size: 24px; font-weight: bold; margin-top: 10px;">25</p>
+                        <p style="font-size: 14px; color: var(--text-light);">款飲品</p>
+                    </div>
+                    <ul style="text-align: left; font-size: 14px; color: var(--text-light);">
+                        <li style="margin-bottom: 8px;">✓ 新鮮茶品</li>
+                        <li style="margin-bottom: 8px;">✓ 奶茶系列</li>
+                        <li style="margin-bottom: 8px;">✓ 水果茶</li>
+                        <li style="margin-bottom: 8px;">✓ 思慕雪</li>
+                        <li style="margin-bottom: 8px;">✓ 配料製作</li>
+                    </ul>
+                </div>
+
+                <!-- 方案 B -->
+                <div style="background: white; border-radius: 20px; padding: 40px 30px; text-align: center; box-shadow: 0 10px 30px rgba(93,181,48,0.2); transform: scale(1.05); position: relative;">
+                    <div style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: var(--primary-color); color: white; padding: 5px 20px; border-radius: 20px; font-size: 12px;">推薦</div>
+                    <div style="width: 80px; height: 80px; background: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <span style="color: white; font-size: 32px; font-weight: bold;">B</span>
+                    </div>
+                    <h3 style="font-size: 24px; margin-bottom: 10px;">方案 B</h3>
+                    <p style="color: var(--text-light); margin-bottom: 20px;">5 天培訓</p>
+                    <div style="background: var(--bg-light); padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                        <p style="font-size: 36px; font-weight: bold; color: var(--primary-color);">7</p>
+                        <p style="font-size: 14px; color: var(--text-light);">系列</p>
+                        <p style="font-size: 24px; font-weight: bold; margin-top: 10px;">55</p>
+                        <p style="font-size: 14px; color: var(--text-light);">款飲品</p>
+                    </div>
+                    <ul style="text-align: left; font-size: 14px; color: var(--text-light);">
+                        <li style="margin-bottom: 8px;">✓ 方案A全部內容</li>
+                        <li style="margin-bottom: 8px;">✓ 咖啡系列</li>
+                        <li style="margin-bottom: 8px;">✓ 東方茶飲</li>
+                        <li style="margin-bottom: 8px;">✓ 進階配料</li>
+                        <li style="margin-bottom: 8px;">✓ 店鋪經營指導</li>
+                    </ul>
+                </div>
+
+                <!-- 方案 C -->
+                <div style="background: white; border-radius: 20px; padding: 40px 30px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: all 0.3s ease;">
+                    <div style="width: 80px; height: 80px; background: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <span style="color: white; font-size: 32px; font-weight: bold;">C</span>
+                    </div>
+                    <h3 style="font-size: 24px; margin-bottom: 10px;">方案 C</h3>
+                    <p style="color: var(--text-light); margin-bottom: 20px;">7 天培訓</p>
+                    <div style="background: var(--bg-light); padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                        <p style="font-size: 36px; font-weight: bold; color: var(--primary-color);">8</p>
+                        <p style="font-size: 14px; color: var(--text-light);">系列</p>
+                        <p style="font-size: 24px; font-weight: bold; margin-top: 10px;">52+6</p>
+                        <p style="font-size: 14px; color: var(--text-light);">款飲品+甜點</p>
+                    </div>
+                    <ul style="text-align: left; font-size: 14px; color: var(--text-light);">
+                        <li style="margin-bottom: 8px;">✓ 方案B全部內容</li>
+                        <li style="margin-bottom: 8px;">✓ 甜點製作</li>
+                        <li style="margin-bottom: 8px;">✓ 季節限定飲品</li>
+                        <li style="margin-bottom: 8px;">✓ 品牌策略諮詢</li>
+                        <li style="margin-bottom: 8px;">✓ 開店全程輔導</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 课程内容表格 -->
+            <div style="margin-top: 60px;">
+                <h3 style="text-align: center; margin-bottom: 30px;">培訓課程內容</h3>
+                <table class="training-table">
+                    <thead>
+                        <tr>
+                            <th>課程類別</th>
+                            <th>方案 A</th>
+                            <th>方案 B</th>
+                            <th>方案 C</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>新鮮茶 Fresh Tea</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                        </tr>
+                        <tr>
+                            <td>奶茶 Milk Tea</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                        </tr>
+                        <tr>
+                            <td>水果茶 Fruit Tea</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                        </tr>
+                        <tr>
+                            <td>思慕雪 Smoothie</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                        </tr>
+                        <tr>
+                            <td>咖啡 Coffee</td>
+                            <td>-</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                        </tr>
+                        <tr>
+                            <td>東方茶飲 Oriental Tea</td>
+                            <td>-</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                        </tr>
+                        <tr>
+                            <td>配料製作 Toppings</td>
+                            <td>基礎</td>
+                            <td>進階</td>
+                            <td>完整</td>
+                        </tr>
+                        <tr>
+                            <td>甜點 Desserts</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>✓</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- 服务流程 -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Service Process</h2>
+                <p>從諮詢到開店，全程陪伴</p>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-top: 50px; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 200px; text-align: center; padding: 20px; position: relative;">
+                    <div style="width: 70px; height: 70px; background: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; position: relative; z-index: 2;">
+                        <span style="color: white; font-size: 24px; font-weight: bold;">1</span>
+                    </div>
+                    <h4 style="margin-bottom: 10px;">諮詢洽談</h4>
+                    <p style="font-size: 14px; color: var(--text-light);">了解您的需求與目標</p>
+                </div>
+                <div style="flex: 1; min-width: 200px; text-align: center; padding: 20px; position: relative;">
+                    <div style="width: 70px; height: 70px; background: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; position: relative; z-index: 2;">
+                        <span style="color: white; font-size: 24px; font-weight: bold;">2</span>
+                    </div>
+                    <h4 style="margin-bottom: 10px;">方案規劃</h4>
+                    <p style="font-size: 14px; color: var(--text-light);">量身定制開店計劃</p>
+                </div>
+                <div style="flex: 1; min-width: 200px; text-align: center; padding: 20px; position: relative;">
+                    <div style="width: 70px; height: 70px; background: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; position: relative; z-index: 2;">
+                        <span style="color: white; font-size: 24px; font-weight: bold;">3</span>
+                    </div>
+                    <h4 style="margin-bottom: 10px;">專業培訓</h4>
+                    <p style="font-size: 14px; color: var(--text-light);">掌握飲品製作技術</p>
+                </div>
+                <div style="flex: 1; min-width: 200px; text-align: center; padding: 20px; position: relative;">
+                    <div style="width: 70px; height: 70px; background: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; position: relative; z-index: 2;">
+                        <span style="color: white; font-size: 24px; font-weight: bold;">4</span>
+                    </div>
+                    <h4 style="margin-bottom: 10px;">店面設計</h4>
+                    <p style="font-size: 14px; color: var(--text-light);">打造專屬品牌形象</p>
+                </div>
+                <div style="flex: 1; min-width: 200px; text-align: center; padding: 20px; position: relative;">
+                    <div style="width: 70px; height: 70px; background: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; position: relative; z-index: 2;">
+                        <span style="color: white; font-size: 24px; font-weight: bold;">5</span>
+                    </div>
+                    <h4 style="margin-bottom: 10px;">正式開店</h4>
+                    <p style="font-size: 14px; color: var(--text-light);">現場指導，順利營運</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="content-section" style="text-align: center; background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); padding: 80px 20px;">
+        <div class="container">
+            <h2 style="margin-bottom: 20px;">Ready to Start Your Business?</h2>
+            <p style="max-width: 600px; margin: 0 auto 30px; color: var(--text-light);">歡迎聯繫我們，獲取更多服務資訊與報價</p>
+            <a href="contact.html" class="btn">CONTACT US</a>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3 style="color: #5DB530; margin-bottom: 15px;">ChaPond 茶加焙</h3>
+                    <p>Your Best Partner for Bubble Tea Business. We provide high quality raw materials and complete solutions.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="product.html#pearls">Fast Pearls</a></li>
+                        <li><a href="product.html#syrup">Syrup</a></li>
+                        <li><a href="product.html#powder">Powder</a></li>
+                        <li><a href="product.html#tea">Tea Leaves</a></li>
+                        <li><a href="product.html#jelly">Jelly</a></li>
+                        <li><a href="product.html#equipment">Equipment</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#5DB530">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                        </svg>
+                        新北市三重區中正路四段10-1號
+                    </p>
+                    <p>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#5DB530">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                        +886-2-8973-1089
+                    </p>
+                    <p>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#5DB530">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                        info@chapond.com
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="white" stroke-width="2"/>
+                                <circle cx="12" cy="12" r="4" fill="none" stroke="white" stroke-width="2"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
+                                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ChaPond International Ltd. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ChaPond 茶加焙產品 - 快煮珍珠、糖漿、茶葉、設備等優質原料">
+    <title>Products - ChaPond 茶加焙</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Cinzel:wght@400;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 加载动画 -->
+    <div class="loader" id="loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- 导航栏 -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="ChaPond 茶加焙" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<span>ChaPond 茶加焙</span>'">
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li class="dropdown active">
+                    <a href="product.html">PRODUCT</a>
+                    <div class="dropdown-content">
+                        <a href="#quick-cook-pearls">快煮珍珠 Quick Cook Pearls</a>
+                        <a href="#tapioca-pearls">珍珠粉圓 Tapioca Pearls</a>
+                        <a href="#popping-boba">爆漿珍珠 Popping Boba</a>
+                        <a href="#jelly">椰果果凍 Jelly</a>
+                        <a href="#syrup">糖漿 Syrup</a>
+                        <a href="#jam">果醬果泥 Jam & Puree</a>
+                        <a href="#tea">茶葉 Tea Leaf</a>
+                        <a href="#equipment">機器設備 Equipment</a>
+                    </div>
+                </li>
+                <li><a href="service.html">SERVICE</a></li>
+                <li><a href="news.html">NEWS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+
+            <div class="nav-icons">
+                <div class="search-box">
+                    <input type="text" placeholder="搜尋...">
+                    <button type="submit">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="M21 21l-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="language-selector">
+                    <select id="language">
+                        <option value="zh-TW">繁體中文</option>
+                        <option value="zh-CN">简体中文</option>
+                        <option value="en">English</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 页面横幅 -->
+    <section class="page-banner">
+        <h1>OUR PRODUCTS</h1>
+    </section>
+
+    <!-- 产品分类导航 -->
+    <section class="content-section" style="padding: 40px 0;">
+        <div class="container">
+            <div class="products-grid" style="grid-template-columns: repeat(4, 1fr);">
+                <a href="#quick-cook-pearls" class="product-card">
+                    <div class="icon">
+                        <svg width="50" height="50" viewBox="0 0 100 100" fill="#5DB530">
+                            <circle cx="30" cy="40" r="10"/><circle cx="50" cy="30" r="10"/><circle cx="70" cy="40" r="10"/>
+                            <circle cx="35" cy="60" r="10"/><circle cx="55" cy="55" r="10"/><circle cx="70" cy="65" r="10"/>
+                        </svg>
+                    </div>
+                    <h3>快煮珍珠</h3>
+                    <p>Quick Cook Pearls</p>
+                </a>
+                <a href="#tapioca-pearls" class="product-card">
+                    <div class="icon">
+                        <svg width="50" height="50" viewBox="0 0 100 100" fill="#5DB530">
+                            <circle cx="50" cy="50" r="35" fill="none" stroke="#5DB530" stroke-width="4"/>
+                            <circle cx="35" cy="45" r="8"/><circle cx="55" cy="40" r="8"/><circle cx="45" cy="60" r="8"/><circle cx="65" cy="55" r="8"/>
+                        </svg>
+                    </div>
+                    <h3>珍珠粉圓</h3>
+                    <p>Tapioca Pearls & Boba</p>
+                </a>
+                <a href="#popping-boba" class="product-card">
+                    <div class="icon">
+                        <svg width="50" height="50" viewBox="0 0 100 100" fill="#5DB530">
+                            <circle cx="30" cy="35" r="12" fill="none" stroke="#5DB530" stroke-width="3"/>
+                            <circle cx="55" cy="30" r="12" fill="none" stroke="#5DB530" stroke-width="3"/>
+                            <circle cx="70" cy="50" r="12" fill="none" stroke="#5DB530" stroke-width="3"/>
+                            <circle cx="40" cy="60" r="12" fill="none" stroke="#5DB530" stroke-width="3"/>
+                        </svg>
+                    </div>
+                    <h3>爆漿珍珠</h3>
+                    <p>Popping Boba</p>
+                </a>
+                <a href="#jelly" class="product-card">
+                    <div class="icon">
+                        <svg width="50" height="50" viewBox="0 0 100 100" fill="#5DB530">
+                            <rect x="20" y="30" width="60" height="45" rx="10" fill="none" stroke="#5DB530" stroke-width="4"/>
+                            <path d="M30 45 h40 M30 55 h35 M30 65 h30" stroke="#5DB530" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>椰果果凍</h3>
+                    <p>Jelly</p>
+                </a>
+                <a href="#syrup" class="product-card">
+                    <div class="icon">
+                        <svg width="50" height="50" viewBox="0 0 100 100" fill="#5DB530">
+                            <path d="M35 20h30v10h-30zM30 30h40l-5 55h-30z" fill="none" stroke="#5DB530" stroke-width="4"/>
+                        </svg>
+                    </div>
+                    <h3>糖漿</h3>
+                    <p>Syrup</p>
+                </a>
+                <a href="#jam" class="product-card">
+                    <div class="icon">
+                        <svg width="50" height="50" viewBox="0 0 100 100" fill="#5DB530">
+                            <ellipse cx="50" cy="35" rx="25" ry="10" fill="none" stroke="#5DB530" stroke-width="4"/>
+                            <path d="M25 35 v35 a25 15 0 0 0 50 0 v-35" fill="none" stroke="#5DB530" stroke-width="4"/>
+                        </svg>
+                    </div>
+                    <h3>果醬果泥</h3>
+                    <p>Jam & Puree</p>
+                </a>
+                <a href="#tea" class="product-card">
+                    <div class="icon">
+                        <svg width="50" height="50" viewBox="0 0 100 100" fill="#5DB530">
+                            <ellipse cx="50" cy="70" rx="28" ry="12" fill="none" stroke="#5DB530" stroke-width="4"/>
+                            <path d="M22 70V50c0-15 12-25 28-25s28 10 28 25v20" fill="none" stroke="#5DB530" stroke-width="4"/>
+                        </svg>
+                    </div>
+                    <h3>茶葉</h3>
+                    <p>Tea Leaf</p>
+                </a>
+                <a href="#equipment" class="product-card">
+                    <div class="icon">
+                        <svg width="50" height="50" viewBox="0 0 100 100" fill="#5DB530">
+                            <rect x="25" y="20" width="50" height="55" rx="5" fill="none" stroke="#5DB530" stroke-width="4"/>
+                            <circle cx="50" cy="45" r="12" fill="none" stroke="#5DB530" stroke-width="3"/>
+                            <rect x="35" y="62" width="30" height="6" rx="2"/>
+                        </svg>
+                    </div>
+                    <h3>機器設備</h3>
+                    <p>Machine & Equipment</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 快煮珍珠 Quick Cook Tapioca Pearls ==================== -->
+    <section class="content-section" id="quick-cook-pearls" style="background: var(--bg-light);">
+        <div class="container">
+            <div class="section-title">
+                <h2>快煮珍珠 Quick Cook Tapioca Pearls</h2>
+                <p>只需5分鐘，輕鬆煮出Q彈珍珠 | 1KG×12袋/箱</p>
+            </div>
+            <div class="product-list">
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TP2511.jpg" alt="黑糖風味" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TP2511</div>'"></div>
+                    <div class="product-item-info"><h4>黑糖風味</h4><p>Brown Sugar</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TP2541.jpg" alt="芒果風味" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TP2541</div>'"></div>
+                    <div class="product-item-info"><h4>芒果風味</h4><p>Mango</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TP2591.jpg" alt="白珍珠" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TP2591</div>'"></div>
+                    <div class="product-item-info"><h4>白珍珠</h4><p>White</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TP2611.jpg" alt="草莓風味" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TP2611</div>'"></div>
+                    <div class="product-item-info"><h4>草莓風味</h4><p>Strawberry</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TP2721.jpg" alt="芋頭風味" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TP2721</div>'"></div>
+                    <div class="product-item-info"><h4>芋頭風味</h4><p>Taro</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TP2741.jpg" alt="地瓜風味" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TP2741</div>'"></div>
+                    <div class="product-item-info"><h4>地瓜風味</h4><p>Sweet Potato</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TP2771.jpg" alt="蔓越莓風味" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TP2771</div>'"></div>
+                    <div class="product-item-info"><h4>蔓越莓風味</h4><p>Cranberry</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TP2781.jpg" alt="櫻桃風味" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TP2781</div>'"></div>
+                    <div class="product-item-info"><h4>櫻桃風味</h4><p>Cherry</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TP2791.jpg" alt="薰衣草風味" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TP2791</div>'"></div>
+                    <div class="product-item-info"><h4>薰衣草風味</h4><p>Lavender</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TP2801.jpg" alt="紅龜粿風味" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TP2801</div>'"></div>
+                    <div class="product-item-info"><h4>紅龜粿風味</h4><p>Ang Ku Kueh</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TP2811.jpg" alt="草仔粿風味" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TP2811</div>'"></div>
+                    <div class="product-item-info"><h4>草仔粿風味</h4><p>Cao Zai Kueh</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TP2881.jpg" alt="桂花風味" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TP2881</div>'"></div>
+                    <div class="product-item-info"><h4>桂花風味</h4><p>Osmanthus</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 珍珠粉圓 Tapioca Pearls & Boba ==================== -->
+    <section class="content-section" id="tapioca-pearls">
+        <div class="container">
+            <div class="section-title">
+                <h2>珍珠粉圓 Tapioca Pearls & Boba</h2>
+                <p>傳統珍珠，多種規格 | 3KG×6袋/箱</p>
+            </div>
+            <div class="product-list">
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TP2002.jpg" alt="珍珠 2.8mm" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TP2002</div>'"></div>
+                    <div class="product-item-info"><h4>珍珠 2.8mm</h4><p>Tapioca Pearl 2.8mm</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TP2011.jpg" alt="珍珠 2.5mm" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TP2011</div>'"></div>
+                    <div class="product-item-info"><h4>珍珠 2.5mm 軟Q版</h4><p>Tapioca Pearl 2.5mm</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TP2021C.jpg" alt="珍珠 2.2mm" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TP2021C</div>'"></div>
+                    <div class="product-item-info"><h4>珍珠 2.2mm 加重黑糖</h4><p>Tapioca Pearl 2.2mm</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TP2031.jpg" alt="珍珠 1.2mm" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TP2031</div>'"></div>
+                    <div class="product-item-info"><h4>珍珠 1.2mm</h4><p>Tapioca Pearl 1.2mm</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TP2052.jpg" alt="白珍珠" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TP2052</div>'"></div>
+                    <div class="product-item-info"><h4>白珍珠</h4><p>Tapioca Pearl - White</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TP2111.jpg" alt="黃金珍珠" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TP2111</div>'"></div>
+                    <div class="product-item-info"><h4>黃金珍珠</h4><p>Golden Tapioca Pearl</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TP2162.jpg" alt="白粉條" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TP2162</div>'"></div>
+                    <div class="product-item-info"><h4>白粉條</h4><p>Noodles Jelly - White</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TP2311.jpg" alt="西谷米" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TP2311</div>'"></div>
+                    <div class="product-item-info"><h4>西谷米</h4><p>Sago</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TP2101.jpg" alt="芋圓" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TP2101</div>'"></div>
+                    <div class="product-item-info"><h4>芋圓</h4><p>Taro Ball</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 爆漿珍珠 Popping Boba ==================== -->
+    <section class="content-section" id="popping-boba" style="background: var(--bg-light);">
+        <div class="container">
+            <div class="section-title">
+                <h2>爆漿珍珠 Popping Boba</h2>
+                <p>爆漿口感，驚喜風味 | 3.2KG×4瓶/箱</p>
+            </div>
+            <div class="product-list">
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TP4033.jpg" alt="荔枝爆爆珠" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TP4033</div>'"></div>
+                    <div class="product-item-info"><h4>荔枝爆爆珠</h4><p>Lychee Popping Boba</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TP4043.jpg" alt="芒果爆爆珠" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TP4043</div>'"></div>
+                    <div class="product-item-info"><h4>芒果爆爆珠</h4><p>Mango Popping Boba</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TP4053.jpg" alt="百香果爆爆珠" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TP4053</div>'"></div>
+                    <div class="product-item-info"><h4>百香果爆爆珠</h4><p>Passion Fruit Popping Boba</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TP4063.jpg" alt="柳橙爆爆珠" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TP4063</div>'"></div>
+                    <div class="product-item-info"><h4>柳橙爆爆珠</h4><p>Orange Popping Boba</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TP4103.jpg" alt="鳳梨爆爆珠" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TP4103</div>'"></div>
+                    <div class="product-item-info"><h4>鳳梨爆爆珠</h4><p>Pineapple Popping Boba</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TP4113.jpg" alt="草莓爆爆珠" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TP4113</div>'"></div>
+                    <div class="product-item-info"><h4>草莓爆爆珠</h4><p>Strawberry Popping Boba</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TP4123.jpg" alt="綠哈密瓜爆爆珠" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TP4123</div>'"></div>
+                    <div class="product-item-info"><h4>綠哈密瓜爆爆珠</h4><p>Honeydew Popping Boba</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TP4133.jpg" alt="青蘋果爆爆珠" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TP4133</div>'"></div>
+                    <div class="product-item-info"><h4>青蘋果爆爆珠</h4><p>Greenapple Popping Boba</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TP4153.jpg" alt="藍莓爆爆珠" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TP4153</div>'"></div>
+                    <div class="product-item-info"><h4>藍莓爆爆珠</h4><p>Blueberry Popping Boba</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TP4223.jpg" alt="奇異果爆爆珠" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TP4223</div>'"></div>
+                    <div class="product-item-info"><h4>奇異果爆爆珠</h4><p>Kiwi Popping Boba</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TP4293.jpg" alt="紅石榴爆爆珠" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TP4293</div>'"></div>
+                    <div class="product-item-info"><h4>紅石榴爆爆珠</h4><p>Pomegranate Popping Boba</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TP4353.jpg" alt="優格爆爆珠" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TP4353</div>'"></div>
+                    <div class="product-item-info"><h4>優格爆爆珠</h4><p>Yogurt Popping Boba</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 椰果果凍 Jelly ==================== -->
+    <section class="content-section" id="jelly">
+        <div class="container">
+            <div class="section-title">
+                <h2>椰果果凍 Jelly</h2>
+                <p>多樣配料，豐富飲品層次 | 3.8KG×4桶/箱</p>
+            </div>
+            <div class="product-list">
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TP3007.jpg" alt="原味椰果" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TP3007</div>'"></div>
+                    <div class="product-item-info"><h4>原味椰果</h4><p>Original Coconut Jelly</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TP3017.jpg" alt="葡萄椰果" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TP3017</div>'"></div>
+                    <div class="product-item-info"><h4>葡萄椰果</h4><p>Grape Flavored Jelly</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TP3037.jpg" alt="荔枝椰果" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TP3037</div>'"></div>
+                    <div class="product-item-info"><h4>荔枝椰果</h4><p>Lychee Flavored Jelly</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TP3047.jpg" alt="芒果椰果" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TP3047</div>'"></div>
+                    <div class="product-item-info"><h4>芒果椰果</h4><p>Mango Flavored Jelly</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TP3057.jpg" alt="百香果椰果" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TP3057</div>'"></div>
+                    <div class="product-item-info"><h4>百香果椰果</h4><p>Passion Fruit Jelly</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TP3087.jpg" alt="水蜜桃椰果" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TP3087</div>'"></div>
+                    <div class="product-item-info"><h4>水蜜桃椰果</h4><p>Peach Flavored Jelly</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TP3107.jpg" alt="鳳梨椰果" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TP3107</div>'"></div>
+                    <div class="product-item-info"><h4>鳳梨椰果</h4><p>Pineapple Flavored Jelly</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TP3117.jpg" alt="草莓椰果" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TP3117</div>'"></div>
+                    <div class="product-item-info"><h4>草莓椰果</h4><p>Strawberry Flavored Jelly</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TP3137.jpg" alt="青蘋果椰果" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TP3137</div>'"></div>
+                    <div class="product-item-info"><h4>青蘋果椰果</h4><p>Greenapple Flavored Jelly</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TP3157.jpg" alt="藍莓椰果" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TP3157</div>'"></div>
+                    <div class="product-item-info"><h4>藍莓椰果</h4><p>Blueberry Flavored Jelly</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TP3361.jpg" alt="咖啡水晶" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TP3361</div>'"></div>
+                    <div class="product-item-info"><h4>咖啡水晶</h4><p>Coffee Crystal Jelly</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TP3371.jpg" alt="彩虹椰果" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TP3371</div>'"></div>
+                    <div class="product-item-info"><h4>彩虹椰果</h4><p>Rainbow Jelly</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TP3511.jpg" alt="綠茶椰果" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TP3511</div>'"></div>
+                    <div class="product-item-info"><h4>綠茶椰果</h4><p>Green Tea Flavored Jelly</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 糖漿 Syrup ==================== -->
+    <section class="content-section" id="syrup" style="background: var(--bg-light);">
+        <div class="container">
+            <div class="section-title">
+                <h2>糖漿 Flavored Syrup</h2>
+                <p>多種口味，調配飲品更便利 | 2.5KG×6瓶/箱</p>
+            </div>
+            <div class="product-list">
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS1011.jpg" alt="葡萄濃縮汁" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS1011</div>'"></div>
+                    <div class="product-item-info"><h4>葡萄濃縮汁</h4><p>Grape Flavored Syrup</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS1021.jpg" alt="檸檬濃縮汁" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS1021</div>'"></div>
+                    <div class="product-item-info"><h4>檸檬濃縮汁</h4><p>Lemon Flavored Syrup</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS1031.jpg" alt="荔枝濃縮汁" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS1031</div>'"></div>
+                    <div class="product-item-info"><h4>荔枝濃縮汁</h4><p>Lychee Flavored Syrup</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS1041.jpg" alt="芒果濃縮汁" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS1041</div>'"></div>
+                    <div class="product-item-info"><h4>芒果濃縮汁</h4><p>Mango Flavored Syrup</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS1051.jpg" alt="百香果濃縮汁" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS1051</div>'"></div>
+                    <div class="product-item-info"><h4>百香果濃縮汁</h4><p>Passion Fruit Syrup</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS1061.jpg" alt="柳橙濃縮汁" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS1061</div>'"></div>
+                    <div class="product-item-info"><h4>柳橙濃縮汁</h4><p>Orange Flavored Syrup</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS1071.jpg" alt="金桔濃縮汁" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS1071</div>'"></div>
+                    <div class="product-item-info"><h4>金桔濃縮汁</h4><p>Kumquat Flavored Syrup</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS1072.jpg" alt="金桔檸檬濃縮汁" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS1072</div>'"></div>
+                    <div class="product-item-info"><h4>金桔檸檬濃縮汁</h4><p>Kumquat & Lemon Syrup</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS1081.jpg" alt="水蜜桃濃縮汁" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS1081</div>'"></div>
+                    <div class="product-item-info"><h4>水蜜桃濃縮汁</h4><p>Peach Flavored Syrup</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS1091.jpg" alt="白桃濃縮汁" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS1091</div>'"></div>
+                    <div class="product-item-info"><h4>白桃濃縮汁</h4><p>White Peach Syrup</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS1101.jpg" alt="鳳梨濃縮汁" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS1101</div>'"></div>
+                    <div class="product-item-info"><h4>鳳梨濃縮汁</h4><p>Pineapple Flavored Syrup</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS1111.jpg" alt="草莓濃縮汁" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS1111</div>'"></div>
+                    <div class="product-item-info"><h4>草莓濃縮汁</h4><p>Strawberry Flavored Syrup</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS1121.jpg" alt="綠哈密瓜濃縮汁" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS1121</div>'"></div>
+                    <div class="product-item-info"><h4>綠哈密瓜濃縮汁</h4><p>Honeydew Flavored Syrup</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS1131.jpg" alt="青蘋果濃縮汁" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS1131</div>'"></div>
+                    <div class="product-item-info"><h4>青蘋果濃縮汁</h4><p>Green Apple Syrup</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS1141.jpg" alt="紅葡萄柚濃縮汁" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS1141</div>'"></div>
+                    <div class="product-item-info"><h4>紅葡萄柚濃縮汁</h4><p>Red Grapefruit Syrup</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS1151.jpg" alt="藍莓濃縮汁" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS1151</div>'"></div>
+                    <div class="product-item-info"><h4>藍莓濃縮汁</h4><p>Blueberry Flavored Syrup</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS1171.jpg" alt="蔓越莓濃縮汁" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS1171</div>'"></div>
+                    <div class="product-item-info"><h4>蔓越莓濃縮汁</h4><p>Cranberry Flavored Syrup</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS1181.jpg" alt="西瓜濃縮汁" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS1181</div>'"></div>
+                    <div class="product-item-info"><h4>西瓜濃縮汁</h4><p>Watermelon Flavored Syrup</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS1191.jpg" alt="烏梅濃縮汁" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS1191</div>'"></div>
+                    <div class="product-item-info"><h4>烏梅濃縮汁</h4><p>Smoked Plum Syrup</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS1221.jpg" alt="奇異果濃縮汁" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS1221</div>'"></div>
+                    <div class="product-item-info"><h4>奇異果濃縮汁</h4><p>Kiwifruit Flavored Syrup</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS1261.jpg" alt="桂圓濃縮汁" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS1261</div>'"></div>
+                    <div class="product-item-info"><h4>桂圓濃縮汁</h4><p>Longan Flavored Syrup</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS1291.jpg" alt="紅石榴濃縮汁" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS1291</div>'"></div>
+                    <div class="product-item-info"><h4>紅石榴濃縮汁</h4><p>Pomegranate Syrup</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS1301.jpg" alt="紅心芭樂濃縮汁" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS1301</div>'"></div>
+                    <div class="product-item-info"><h4>紅心芭樂濃縮汁</h4><p>Red Guava Flavored Syrup</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS1311.jpg" alt="紅哈密瓜濃縮汁" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS1311</div>'"></div>
+                    <div class="product-item-info"><h4>紅哈密瓜濃縮汁</h4><p>Cantaloupe Flavored Syrup</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS1331.jpg" alt="椰子濃縮汁" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS1331</div>'"></div>
+                    <div class="product-item-info"><h4>椰子濃縮汁</h4><p>Coconut Flavored Syrup</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS1401.jpg" alt="水果茶濃縮汁" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS1401</div>'"></div>
+                    <div class="product-item-info"><h4>水果茶濃縮汁</h4><p>Mix Fruit Flavored Syrup</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS2011.jpg" alt="薑母濃縮汁" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS2011</div>'"></div>
+                    <div class="product-item-info"><h4>薑母濃縮汁</h4><p>Ginger Flavored Syrup</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS2031.jpg" alt="乳酸濃縮汁" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS2031</div>'"></div>
+                    <div class="product-item-info"><h4>乳酸濃縮汁</h4><p>Yogurt Flavored Syrup</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS2531.jpg" alt="桂花蜜糖漿" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS2531</div>'"></div>
+                    <div class="product-item-info"><h4>桂花蜜糖漿</h4><p>Osmanthus Flavored Syrup</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS2092.jpg" alt="精選薰衣草糖漿" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS2092</div>'"></div>
+                    <div class="product-item-info"><h4>精選薰衣草糖漿</h4><p>Lavender Flavored Syrup</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS2102.jpg" alt="精選玫瑰糖漿" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS2102</div>'"></div>
+                    <div class="product-item-info"><h4>精選玫瑰糖漿</h4><p>Rose Flavored Syrup</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS2111.jpg" alt="香草糖漿" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS2111</div>'"></div>
+                    <div class="product-item-info"><h4>香草糖漿</h4><p>Vanilla Flavored Syrup</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS2121.jpg" alt="榛果糖漿" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS2121</div>'"></div>
+                    <div class="product-item-info"><h4>榛果糖漿</h4><p>Hazelnut Flavored Syrup</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS2131.jpg" alt="焦糖糖漿" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS2131</div>'"></div>
+                    <div class="product-item-info"><h4>焦糖糖漿</h4><p>Caramel Flavored Syrup</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 果醬果泥 Jam & Puree ==================== -->
+    <section class="content-section" id="jam">
+        <div class="container">
+            <div class="section-title">
+                <h2>果醬果泥 Jam & Puree</h2>
+                <p>天然果粒，風味濃郁</p>
+            </div>
+
+            <!-- 果醬 Jam -->
+            <h3 style="margin: 30px 0 20px; color: var(--primary-color);">果醬 Jam | 4KG×6桶/箱</h3>
+            <div class="product-list">
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS3041.jpg" alt="芒果顆粒果醬" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS3041</div>'"></div>
+                    <div class="product-item-info"><h4>芒果顆粒果醬</h4><p>Mango Jam</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS3051.jpg" alt="百香果加籽果醬" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS3051</div>'"></div>
+                    <div class="product-item-info"><h4>百香果加籽果醬</h4><p>Passionfruit Jam</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS3082.jpg" alt="水蜜桃果醬" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS3082</div>'"></div>
+                    <div class="product-item-info"><h4>水蜜桃果醬</h4><p>Peach Jam</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS3101.jpg" alt="鳳梨片果醬" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS3101</div>'"></div>
+                    <div class="product-item-info"><h4>鳳梨片果醬</h4><p>Pineapple Jam</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS3111.jpg" alt="草莓顆粒果醬" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS3111</div>'"></div>
+                    <div class="product-item-info"><h4>草莓顆粒果醬</h4><p>Strawberry Jam</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS3221.jpg" alt="奇異果顆粒果醬" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS3221</div>'"></div>
+                    <div class="product-item-info"><h4>奇異果顆粒果醬</h4><p>Kiwifruit Jam</p></div>
+                </div>
+            </div>
+
+            <!-- 果泥 Puree -->
+            <h3 style="margin: 50px 0 20px; color: var(--primary-color);">果泥 Puree | 4KG×6桶/箱</h3>
+            <div class="product-list">
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS4041.jpg" alt="芒果果泥" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS4041</div>'"></div>
+                    <div class="product-item-info"><h4>芒果果泥</h4><p>Mango Puree</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS4051.jpg" alt="百香果果泥" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS4051</div>'"></div>
+                    <div class="product-item-info"><h4>百香果果泥</h4><p>Passionfruit Puree</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS4081.jpg" alt="水蜜桃果泥" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS4081</div>'"></div>
+                    <div class="product-item-info"><h4>水蜜桃果泥</h4><p>Peach Puree</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS4111.jpg" alt="草莓果泥" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS4111</div>'"></div>
+                    <div class="product-item-info"><h4>草莓果泥</h4><p>Strawberry Puree</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS4131.jpg" alt="蘋果果泥" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS4131</div>'"></div>
+                    <div class="product-item-info"><h4>蘋果果泥</h4><p>Apple Puree</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS4151.jpg" alt="藍莓果泥" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS4151</div>'"></div>
+                    <div class="product-item-info"><h4>藍莓果泥</h4><p>Blueberry Puree</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS4221.jpg" alt="奇異果果泥" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS4221</div>'"></div>
+                    <div class="product-item-info"><h4>奇異果果泥</h4><p>Kiwifruit Puree</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS4351.jpg" alt="綜合水果果泥" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS4351</div>'"></div>
+                    <div class="product-item-info"><h4>綜合水果果泥</h4><p>Mix Fruit Puree</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/JS4401.jpg" alt="綜合莓果泥" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>JS4401</div>'"></div>
+                    <div class="product-item-info"><h4>綜合莓果泥</h4><p>Mix Berry Puree</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 茶葉 Tea Leaf ==================== -->
+    <section class="content-section" id="tea" style="background: var(--bg-light);">
+        <div class="container">
+            <div class="section-title">
+                <h2>茶葉 Tea Leaf & Grind Tea</h2>
+                <p>台灣優質茶葉，香氣濃郁</p>
+            </div>
+
+            <!-- 叶茶 -->
+            <h3 style="margin: 30px 0 20px; color: var(--primary-color);">葉茶 Tea Leaf | 0.6KG×30包/箱</h3>
+            <div class="product-list">
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TL1011.jpg" alt="阿薩姆紅茶葉" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TL1011</div>'"></div>
+                    <div class="product-item-info"><h4>阿薩姆紅茶葉</h4><p>Assam Black Tea Leaf</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TL1012.jpg" alt="精選紅茶葉" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TL1012</div>'"></div>
+                    <div class="product-item-info"><h4>精選紅茶葉</h4><p>Selected Black Tea Leaf</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TL1022.jpg" alt="錫蘭紅茶葉" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TL1022</div>'"></div>
+                    <div class="product-item-info"><h4>錫蘭紅茶葉</h4><p>Ceylon Black Tea Leaf</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TL1036.jpg" alt="精選伯爵紅茶葉" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TL1036</div>'"></div>
+                    <div class="product-item-info"><h4>精選伯爵紅茶葉</h4><p>Earl Grey Black Tea Leaf</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TL1062.jpg" alt="茉香綠茶葉" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TL1062</div>'"></div>
+                    <div class="product-item-info"><h4>茉香綠茶葉</h4><p>Jasmine Green Tea Leaf</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TL1071.jpg" alt="炭焙烏龍茶葉" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TL1071</div>'"></div>
+                    <div class="product-item-info"><h4>炭焙烏龍茶葉</h4><p>Roasted Oolong Tea Leaf</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TL1091.jpg" alt="青茶葉" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TL1091</div>'"></div>
+                    <div class="product-item-info"><h4>青茶葉</h4><p>Mountain Tea Leaf</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TL1092.jpg" alt="精選四季春茶葉" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TL1092</div>'"></div>
+                    <div class="product-item-info"><h4>精選四季春茶葉</h4><p>Four Season Tea Leaf</p></div>
+                </div>
+            </div>
+
+            <!-- 研磨茶 -->
+            <h3 style="margin: 50px 0 20px; color: var(--primary-color);">研磨茶末 Grind Tea | 0.6KG×20包/箱</h3>
+            <div class="product-list">
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/PD3011.jpg" alt="阿薩姆紅茶末" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>PD3011</div>'"></div>
+                    <div class="product-item-info"><h4>阿薩姆紅茶末</h4><p>Assam Black Tea - Grind</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TL3021.jpg" alt="錫蘭紅茶末" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TL3021</div>'"></div>
+                    <div class="product-item-info"><h4>錫蘭紅茶末</h4><p>Ceylon Black Tea - Grind</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TL3061.jpg" alt="茉香綠茶末" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TL3061</div>'"></div>
+                    <div class="product-item-info"><h4>茉香綠茶末</h4><p>Jasmine Green Tea - Grind</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TL3076.jpg" alt="炭焙烏龍茶末" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TL3076</div>'"></div>
+                    <div class="product-item-info"><h4>炭焙烏龍茶末</h4><p>Roasted Oolong Tea - Grind</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 機器設備 Machine & Equipment ==================== -->
+    <section class="content-section" id="equipment">
+        <div class="container">
+            <div class="section-title">
+                <h2>機器設備 Machine & Equipment</h2>
+                <p>專業設備，提升店鋪效率</p>
+            </div>
+            <div class="product-list">
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/Bunn.jpg" alt="濾掛式煮茶機" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>Bunn</div>'"></div>
+                    <div class="product-item-info"><h4>濾掛式煮茶機</h4><p>Bunn ITCB-A</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/SW-611.jpg" alt="連續蒸氣加熱機" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>SW-611</div>'"></div>
+                    <div class="product-item-info"><h4>連續蒸氣加熱機</h4><p>Steam & Hot Water Dispenser</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/SW-641.jpg" alt="熱水機" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>SW-641</div>'"></div>
+                    <div class="product-item-info"><h4>熱水機 (cUL版)</h4><p>Steam & Hot Water Dispenser</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/SW-642.jpg" alt="四段式定溫加熱機" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>SW-642</div>'"></div>
+                    <div class="product-item-info"><h4>四段式定溫加熱機</h4><p>Steam & Hot Water Dispenser</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TB-35.jpg" alt="觸控式商用泡茶機" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TB-35</div>'"></div>
+                    <div class="product-item-info"><h4>觸控式商用泡茶機</h4><p>TB-35T Tea Brewer</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TB-35+.jpg" alt="觸控式商用泡茶機" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TB-35+</div>'"></div>
+                    <div class="product-item-info"><h4>觸控式商用泡茶機</h4><p>TB-35 Plus Tea Brewer</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TC-211.jpg" alt="淬茶機" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TC-211</div>'"></div>
+                    <div class="product-item-info"><h4>淬茶機</h4><p>TC-211 Tea Espresso</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TC-220.jpg" alt="淬茶機" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TC-220</div>'"></div>
+                    <div class="product-item-info"><h4>淬茶機</h4><p>TC-220 Tea Espresso</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TC-320.jpg" alt="淬茶機" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TC-320</div>'"></div>
+                    <div class="product-item-info"><h4>淬茶機</h4><p>TC-320 Tea Espresso</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TC-321.jpg" alt="淬茶機" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TC-321</div>'"></div>
+                    <div class="product-item-info"><h4>淬茶機</h4><p>TC-321 Tea Espresso</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/TC-330.jpg" alt="淬茶機" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>TC-330</div>'"></div>
+                    <div class="product-item-info"><h4>淬茶機</h4><p>TC-330 Tea Espresso</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/ET-9ET.jpg" alt="果糖定量機" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>ET-9ET</div>'"></div>
+                    <div class="product-item-info"><h4>果糖定量機 (UL&NSF)</h4><p>ET-9ET Fructose Dispenser</p></div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item-image"><img src="images/ET-9EN.jpg" alt="果糖定量機" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>ET-9EN</div>'"></div>
+                    <div class="product-item-info"><h4>果糖定量機 (CE)</h4><p>ET-9EN Fructose Dispenser</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="content-section" style="text-align: center; background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); padding: 80px 20px;">
+        <div class="container">
+            <h2 style="margin-bottom: 20px;">Interested in Our Products?</h2>
+            <p style="max-width: 600px; margin: 0 auto 30px; color: var(--text-light);">歡迎聯繫我們，了解更多產品資訊及報價</p>
+            <a href="contact.html" class="btn">CONTACT US</a>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3 style="color: #5DB530; margin-bottom: 15px;">ChaPond 茶加焙</h3>
+                    <p>Your Best Partner for Bubble Tea Business. We provide high quality raw materials and complete solutions.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="#quick-cook-pearls">Quick Cook Pearls</a></li>
+                        <li><a href="#tapioca-pearls">Tapioca Pearls</a></li>
+                        <li><a href="#popping-boba">Popping Boba</a></li>
+                        <li><a href="#jelly">Jelly</a></li>
+                        <li><a href="#syrup">Syrup</a></li>
+                        <li><a href="#tea">Tea Leaf</a></li>
+                        <li><a href="#equipment">Equipment</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#5DB530">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                        </svg>
+                        新北市三重區中正路四段10-1號
+                    </p>
+                    <p>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#5DB530">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                        +886-2-8973-1089
+                    </p>
+                    <p>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#5DB530">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                        info@chapond.com
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="white" stroke-width="2"/>
+                                <circle cx="12" cy="12" r="4" fill="none" stroke="white" stroke-width="2"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
+                                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ChaPond International Ltd. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

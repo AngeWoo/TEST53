@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ChaPond 茶加焙最新消息與活動">
+    <title>News - ChaPond 茶加焙</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Cinzel:wght@400;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 加载动画 -->
+    <div class="loader" id="loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- 导航栏 -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="ChaPond 茶加焙" onerror="this.style.display='none'; this.parentElement.innerHTML='<span>ChaPond 茶加焙</span>'">
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li class="dropdown">
+                    <a href="product.html">PRODUCT</a>
+                    <div class="dropdown-content">
+                        <a href="product.html#pearls">快煮珍珠 Fast Pearls</a>
+                        <a href="product.html#syrup">糖漿 Syrup</a>
+                        <a href="product.html#powder">粉類 Powder</a>
+                        <a href="product.html#tea">茶葉 Tea</a>
+                        <a href="product.html#jelly">果凍 Jelly</a>
+                        <a href="product.html#equipment">設備 Equipment</a>
+                    </div>
+                </li>
+                <li><a href="service.html">SERVICE</a></li>
+                <li class="active"><a href="news.html">NEWS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+
+            <div class="nav-icons">
+                <div class="search-box">
+                    <input type="text" placeholder="搜尋...">
+                    <button type="submit">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="M21 21l-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="language-selector">
+                    <select id="language">
+                        <option value="zh-TW">繁體中文</option>
+                        <option value="zh-CN">简体中文</option>
+                        <option value="en">English</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 页面横幅 -->
+    <section class="page-banner">
+        <h1>NEWS</h1>
+    </section>
+
+    <!-- 新闻列表 -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Latest News & Updates</h2>
+                <p>了解我們的最新動態與活動資訊</p>
+            </div>
+
+            <div class="news-list">
+                <!-- 新闻 1 -->
+                <article class="news-list-item">
+                    <div class="news-list-image">
+                        <img src="images/news-pearls.jpg" alt="Fast Pearls Launch" onerror="this.onerror=null; this.parentElement.innerHTML='<div style=background:%23e8f5e9;height:100%;display:flex;align-items:center;justify-content:center;color:%235DB530;font-size:16px>Image</div>'">
+                    </div>
+                    <div class="news-list-content">
+                        <div class="news-date">
+                            <span class="day">25</span>
+                            <span class="month">MAR</span>
+                        </div>
+                        <h3>Fast Pearls Launch in June</h3>
+                        <p>我們全新的快煮珍珠系列即將於六月正式上市！這款革命性的產品只需5分鐘即可烹煮完成，大幅提升店鋪營運效率。新產品包含黑糖、原味、金珍珠等多種口味，敬請期待！</p>
+                        <p style="color: var(--text-light); font-size: 14px; margin-top: 10px;">Our new Fast Cooking Pearls series is launching in June! This revolutionary product can be cooked in just 5 minutes, greatly improving store operation efficiency.</p>
+                        <a href="#" class="btn btn-outline" style="margin-top: 15px;">MORE →</a>
+                    </div>
+                </article>
+
+                <!-- 新闻 2 -->
+                <article class="news-list-item">
+                    <div class="news-list-image">
+                        <img src="images/news-brand.jpg" alt="Brand Design" onerror="this.onerror=null; this.parentElement.innerHTML='<div style=background:%23e8f5e9;height:100%;display:flex;align-items:center;justify-content:center;color:%235DB530;font-size:16px>Image</div>'">
+                    </div>
+                    <div class="news-list-content">
+                        <div class="news-date">
+                            <span class="day">25</span>
+                            <span class="month">OCT</span>
+                        </div>
+                        <h3>The New Brand Design of Fruit Tea Bar</h3>
+                        <p>恭喜我們的客戶水果茶吧完成全新品牌設計！從Logo設計到店面規劃，ChaPond團隊提供了完整的品牌解決方案。新設計融合了現代簡約風格與水果元素，打造出獨特的品牌形象。</p>
+                        <p style="color: var(--text-light); font-size: 14px; margin-top: 10px;">Congratulations to our client Fruit Tea Bar on completing their new brand design! The ChaPond team provided comprehensive brand solutions from logo design to store planning.</p>
+                        <a href="#" class="btn btn-outline" style="margin-top: 15px;">MORE →</a>
+                    </div>
+                </article>
+
+                <!-- 新闻 3 -->
+                <article class="news-list-item">
+                    <div class="news-list-image">
+                        <img src="images/news-cooking.jpg" alt="How to Cook Pearls" onerror="this.onerror=null; this.parentElement.innerHTML='<div style=background:%23e8f5e9;height:100%;display:flex;align-items:center;justify-content:center;color:%235DB530;font-size:16px>Image</div>'">
+                    </div>
+                    <div class="news-list-content">
+                        <div class="news-date">
+                            <span class="day">15</span>
+                            <span class="month">OCT</span>
+                        </div>
+                        <h3>How to Cook Pearls Easily?</h3>
+                        <p>珍珠烹煮技巧大公開！許多店家在烹煮珍珠時會遇到口感不佳、外硬內軟等問題。本篇文章將分享專業的烹煮技巧，讓您輕鬆煮出Q彈美味的珍珠。包含水量比例、烹煮時間、悶煮技巧等完整教學。</p>
+                        <p style="color: var(--text-light); font-size: 14px; margin-top: 10px;">Pearl cooking tips revealed! This article shares professional cooking techniques to help you easily cook chewy and delicious pearls.</p>
+                        <a href="#" class="btn btn-outline" style="margin-top: 15px;">MORE →</a>
+                    </div>
+                </article>
+
+                <!-- 新闻 4 -->
+                <article class="news-list-item">
+                    <div class="news-list-image">
+                        <img src="images/news-exhibition.jpg" alt="Exhibition" onerror="this.onerror=null; this.parentElement.innerHTML='<div style=background:%23e8f5e9;height:100%;display:flex;align-items:center;justify-content:center;color:%235DB530;font-size:16px>Image</div>'">
+                    </div>
+                    <div class="news-list-content">
+                        <div class="news-date">
+                            <span class="day">08</span>
+                            <span class="month">SEP</span>
+                        </div>
+                        <h3>ChaPond at Food Taipei 2024</h3>
+                        <p>ChaPond將參加2024年台北國際食品展！我們將在展覽中展示最新的產品系列，包含快煮珍珠、新口味糖漿、以及全新設備。歡迎蒞臨我們的攤位，體驗ChaPond的優質產品與服務。</p>
+                        <p style="color: var(--text-light); font-size: 14px; margin-top: 10px;">ChaPond will participate in Food Taipei 2024! We will showcase our latest product series at the exhibition.</p>
+                        <a href="#" class="btn btn-outline" style="margin-top: 15px;">MORE →</a>
+                    </div>
+                </article>
+
+                <!-- 新闻 5 -->
+                <article class="news-list-item">
+                    <div class="news-list-image">
+                        <img src="images/news-training.jpg" alt="Training Course" onerror="this.onerror=null; this.parentElement.innerHTML='<div style=background:%23e8f5e9;height:100%;display:flex;align-items:center;justify-content:center;color:%235DB530;font-size:16px>Image</div>'">
+                    </div>
+                    <div class="news-list-content">
+                        <div class="news-date">
+                            <span class="day">20</span>
+                            <span class="month">AUG</span>
+                        </div>
+                        <h3>New Training Course Available</h3>
+                        <p>全新進階培訓課程開放報名中！本課程專為已有基礎的店家設計，內容涵蓋季節限定飲品開發、成本控制、以及行銷策略等進階主題。由資深講師親自授課，名額有限，歡迎報名。</p>
+                        <p style="color: var(--text-light); font-size: 14px; margin-top: 10px;">New advanced training course now open for registration! This course is designed for stores with basic knowledge.</p>
+                        <a href="#" class="btn btn-outline" style="margin-top: 15px;">MORE →</a>
+                    </div>
+                </article>
+
+                <!-- 新闻 6 -->
+                <article class="news-list-item">
+                    <div class="news-list-image">
+                        <img src="images/news-europe.jpg" alt="Europe Office" onerror="this.onerror=null; this.parentElement.innerHTML='<div style=background:%23e8f5e9;height:100%;display:flex;align-items:center;justify-content:center;color:%235DB530;font-size:16px>Image</div>'">
+                    </div>
+                    <div class="news-list-content">
+                        <div class="news-date">
+                            <span class="day">01</span>
+                            <span class="month">JUL</span>
+                        </div>
+                        <h3>ChaPond Europe Office Now Open</h3>
+                        <p>為了更好地服務歐洲地區的客戶，ChaPond歐洲辦公室已正式營運！位於荷蘭的新辦公室將提供更快速的配送服務、在地化的客戶支援、以及歐洲市場的專業諮詢服務。</p>
+                        <p style="color: var(--text-light); font-size: 14px; margin-top: 10px;">ChaPond Europe office is now officially open! Located in the Netherlands, the new office will provide faster delivery services.</p>
+                        <a href="#" class="btn btn-outline" style="margin-top: 15px;">MORE →</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- 分页 -->
+            <div style="display: flex; justify-content: center; gap: 10px; margin-top: 50px;">
+                <a href="#" style="width: 40px; height: 40px; background: var(--primary-color); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">1</a>
+                <a href="#" style="width: 40px; height: 40px; background: var(--bg-light); color: var(--text-color); border-radius: 50%; display: flex; align-items: center; justify-content: center;">2</a>
+                <a href="#" style="width: 40px; height: 40px; background: var(--bg-light); color: var(--text-color); border-radius: 50%; display: flex; align-items: center; justify-content: center;">3</a>
+                <a href="#" style="width: 40px; height: 40px; background: var(--bg-light); color: var(--text-color); border-radius: 50%; display: flex; align-items: center; justify-content: center;">→</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 订阅区域 -->
+    <section class="content-section" style="background: var(--bg-light);">
+        <div class="container" style="text-align: center;">
+            <h2 style="margin-bottom: 20px;">Subscribe to Our Newsletter</h2>
+            <p style="max-width: 500px; margin: 0 auto 30px; color: var(--text-light);">訂閱我們的電子報，獲取最新產品資訊與優惠活動</p>
+            <form style="display: flex; gap: 15px; max-width: 500px; margin: 0 auto; flex-wrap: wrap; justify-content: center;">
+                <input type="email" placeholder="輸入您的電子郵件" style="flex: 1; min-width: 250px; padding: 15px 20px; border: 1px solid var(--border-color); border-radius: 30px; font-size: 14px;">
+                <button type="submit" class="btn">SUBSCRIBE</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3 style="color: #5DB530; margin-bottom: 15px;">ChaPond 茶加焙</h3>
+                    <p>Your Best Partner for Bubble Tea Business. We provide high quality raw materials and complete solutions.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="product.html#pearls">Fast Pearls</a></li>
+                        <li><a href="product.html#syrup">Syrup</a></li>
+                        <li><a href="product.html#powder">Powder</a></li>
+                        <li><a href="product.html#tea">Tea Leaves</a></li>
+                        <li><a href="product.html#jelly">Jelly</a></li>
+                        <li><a href="product.html#equipment">Equipment</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#5DB530">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                        </svg>
+                        新北市三重區中正路四段10-1號
+                    </p>
+                    <p>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#5DB530">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                        +886-2-8973-1089
+                    </p>
+                    <p>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#5DB530">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                        info@chapond.com
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="white" stroke-width="2"/>
+                                <circle cx="12" cy="12" r="4" fill="none" stroke="white" stroke-width="2"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
+                                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ChaPond International Ltd. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
